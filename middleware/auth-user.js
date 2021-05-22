@@ -10,7 +10,7 @@ exports.authenticateUser = async (req, res, next) => {
   // Parse the user's credentials from the Authorization header.
   const credentials = auth(req);
   console.log(credentials);
-  // If the user's credentials are available...
+  // If the user's credentials are available
   if (credentials) {
     const user = await User.findOne({
       where: { emailAddress: credentials.name }
